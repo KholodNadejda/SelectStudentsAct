@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">SelectStudentsAct</string>
+
+    <string name="Jaroslav">Jaroslav</string>
+    <string name="Nikita">Nikita</string>
+    <string name="Marina">Marina</string>
+    <string name="Anna">Anna</string>
+    <string name="Egor">Egor</string>
+    <string name="Andrey">Andrey</string>
+    <string name="Natasha">Natasha</string>
+    <string name="Anton">Anton</string>
+    <string name="Dima">Dima</string>
+    <string name="Darina">Darina</string>
+    <string name="Nadejda">Nadejda</string>
+    <string name="Alexander_K">Alexander K</string>
+    <string name="Anastasia">Anastasia</string>
+    <string name="Stas">Stas</string>
+    <string name="Alexander_I">Alexander I</string>
 </resources>
