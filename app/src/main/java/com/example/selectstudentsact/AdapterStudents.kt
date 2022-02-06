@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.selectstudentsact.databinding.StudentItemBinding
 
-class AdapterStudents: RecyclerView.Adapter<AdapterStudents.StudentsHolder>() {
+class AdapterStudents : RecyclerView.Adapter<AdapterStudents.StudentsHolder>() {
     val studentList = ArrayList<StudentsTMS>()
 
     class StudentsHolder(item: View) : RecyclerView.ViewHolder(item) {

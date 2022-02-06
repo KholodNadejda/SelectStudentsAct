@@ -17,8 +17,7 @@ class SelectStudents : AppCompatActivity() {
     private var mainMenu: Menu? = null
     private val adapter = AdapterStudents()
     private var IdList1 = listOf<String>()
-   // private lateinit var list: ArrayList<String>
-   private var list = ""
+    private var list = ""
     private val i = Intent()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -27,22 +26,26 @@ class SelectStudents : AppCompatActivity() {
         arrayStudents()
         init()
     }
+
     private fun init() {
-        val mRecyclerView= findViewById<RecyclerView>(R.id.rcStudents) //id RecyclerView
-        val dividerItemDecorationV = DividerItemDecoration(this@SelectStudents, LinearLayoutManager.VERTICAL)
-        val dividerItemDecorationH = DividerItemDecoration(this@SelectStudents, LinearLayoutManager.HORIZONTAL)
+        val mRecyclerView = findViewById<RecyclerView>(R.id.rcStudents) //id RecyclerView
+        val dividerItemDecorationV =
+            DividerItemDecoration(this@SelectStudents, LinearLayoutManager.VERTICAL)
+        val dividerItemDecorationH =
+            DividerItemDecoration(this@SelectStudents, LinearLayoutManager.HORIZONTAL)
         mRecyclerView.addItemDecoration(dividerItemDecorationV)
         mRecyclerView.addItemDecoration(dividerItemDecorationH)
         mRecyclerView.layoutManager = GridLayoutManager(this, 2)
         mRecyclerView.adapter = adapter
-        for (i in IdList1.indices){
+        for (i in IdList1.indices) {
             val random = Random
-            val student = StudentsTMS(random.nextInt(R.drawable.c0 .. R.drawable.c9), IdList1[i], false)
+            val student =
+                StudentsTMS(random.nextInt(R.drawable.c0..R.drawable.c9), IdList1[i], false)
             adapter.studentList.add(student)
         }
     }
 
-    private fun arrayStudents(){
+    private fun arrayStudents() {
         IdList1 = listOf(
             resources.getString(R.string.Nikita),
             resources.getString(R.string.Marina),
@@ -58,15 +61,16 @@ class SelectStudents : AppCompatActivity() {
             resources.getString(R.string.Anastasia),
             resources.getString(R.string.Stas),
             resources.getString(R.string.Alexander_I),
-            resources.getString(R.string.Jaroslav))
+            resources.getString(R.string.Jaroslav)
+        )
     }
 
-    private fun startRandom(){
+    private fun startRandom() {
 
-        var  checkStudents = adapter.studentList.filter { it.switchS  }
-        if(checkStudents.isNotEmpty()){
-            for(i in checkStudents.indices){
-                if (i == 0){
+        var checkStudents = adapter.studentList.filter { it.switchS }
+        if (checkStudents.isNotEmpty()) {
+            for (i in checkStudents.indices) {
+                if (i == 0) {
                     list += checkStudents[i].name
                 } else {
                     list = list + " " + checkStudents[i].name
@@ -82,7 +86,9 @@ class SelectStudents : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.mAdd -> {  addStd() }
+            R.id.mAdd -> {
+                addStd()
+            }
         }
         return true
     }
@@ -93,14 +99,14 @@ class SelectStudents : AppCompatActivity() {
         return super.onCreateOptionsMenu(menu)
     }
 
-    private fun addStd(){
+    private fun addStd() {
         val alterDialog = AlertDialog.Builder(this)
         alterDialog.setTitle("Add?")
         alterDialog.setMessage("Are u ready?")
-        alterDialog.setPositiveButton("Yep") {_,_ ->
+        alterDialog.setPositiveButton("Yep") { _, _ ->
             startRandom()
         }
-        alterDialog.setNegativeButton("NO"){_,_ -> }
+        alterDialog.setNegativeButton("NO") { _, _ -> }
         alterDialog.show()
     }
 }
