@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Студенты</string>
+    <string name="Jaroslav">Ярослав</string>
+    <string name="Nikita">Никита</string>
+    <string name="Marina">Марина</string>
+    <string name="Anna">Анна</string>
+    <string name="Egor">Егор</string>
+    <string name="Andrey">Андрей</string>
+    <string name="Natasha">Наташа</string>
+    <string name="Anton">Антон</string>
+    <string name="Dima">Дима</string>
+    <string name="Darina">Дарина</string>
+    <string name="Nadejda">Надежда</string>
+    <string name="Alexander_K">Александр_K</string>
+    <string name="Anastasia">Анастасия</string>
+    <string name="Stas">Стас</string>
+    <string name="Alexander_I">Александр_И</string>
+
+</resources>
